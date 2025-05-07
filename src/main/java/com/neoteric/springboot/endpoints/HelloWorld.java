@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
-public class HelloWorld {
+//@RestController
+//public class HelloWorld {
 
 //    private static Map<String,Employee> employeeMap = new HashMap<>();
 //
@@ -28,28 +28,28 @@ public class HelloWorld {
 //
 //    }
 
-    SQLConnection sqlConnection = new SQLConnection();
-
-
-
-    @GetMapping(value = "/getemployee/{empId}")
-    public Employee findEmployee (@PathVariable String empId) {
-        System.out.println("Enter into getEmployee" + empId);
-        //Employee e = employeeMap.get(empId);
-        List<Employee> employees=sqlConnection.getEmployeeDetails();
-      //  System.out.println("Exit from getEmployee");
-       // return e;
-
-        for (Employee employee:employees){
-
-            if (employee.getEmpId().equalsIgnoreCase(empId)){
-                System.out.println("Eixt from getEmployee:found");
-            }
-        }
-        System.out.println("Exit from getEmployee:notFound");
-        return null;
-    }
-
-
-}
+//    SQLConnection sqlConnection = new SQLConnection();
+//
+//
+//
+//    @GetMapping(value = "/getemployee/{empId}")
+//    public Employee findEmployee (@PathVariable String empId) {
+//        System.out.println("Enter into getEmployee" + empId);
+//        //Employee e = employeeMap.get(empId);
+//        List<Employee> employees=sqlConnection.getEmployeeDetails();
+//      //  System.out.println("Exit from getEmployee");
+//       // return e;
+//
+//        for (Employee employee:employees){
+//
+//            if (employee.getEmpId().equalsIgnoreCase(empId)){
+//                System.out.println("Eixt from getEmployee:found");
+//            }
+//        }
+//        System.out.println("Exit from getEmployee:notFound");
+//        return null;
+//    }
+//
+//
+//}
 
